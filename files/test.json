@@ -1,0 +1,10 @@
+{
+    "class": "MKER",
+    "burnup": 30,
+    "kpd": 0.352,
+    "enrichment": 0.024,
+    "termal_capacity": 4250,
+    "electrical_capacity": 1500,
+    "life_time": 50,
+    "first_load": 192
+}
