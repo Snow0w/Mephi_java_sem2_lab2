@@ -22,7 +22,7 @@ public class Gui extends JFrame implements ActionListener {
   private JButton chooseFile;
   private JButton renderTree;
   private JTextField fileName;
-  private JScrollPane scroll;
+  private JScrollPane scrollPanel;
   private JTree tree;
   private DefaultMutableTreeNode rootTree;
   private String selectedFileName;
@@ -41,9 +41,9 @@ public class Gui extends JFrame implements ActionListener {
     panelTop.add(renderTree);
     panelTop.add(fileName);
     this.tree = new JTree(rootTree);
-    this.scroll = new JScrollPane(tree);
+    this.scrollPanel = new JScrollPane(tree);
     this.add(panelTop, BorderLayout.NORTH);
-    this.add(scroll, BorderLayout.CENTER);
+    this.add(scrollPanel, BorderLayout.CENTER);
     chooseFile.addActionListener(this);
     renderTree.addActionListener(this);
     fileName.setColumns(100);
@@ -76,7 +76,7 @@ public class Gui extends JFrame implements ActionListener {
         new String("Реакторы (" + storage.getType() + ")"));
     tree = new JTree(rootTree);
     updateTreeView(storage);
-    scroll.setViewportView(tree);
+    scrollPanel.setViewportView(tree);
   }
 
   private void updateTreeView(ReactorStorage storage) {
