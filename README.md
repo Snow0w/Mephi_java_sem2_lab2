@@ -2,15 +2,29 @@
 <h3 align=center> Отчет по лабораторной работе №2</h3>
 <h3 align=center> по дисциплине: Теория и технологии программирования</h3>
 
+<br>
+
+В данной работе изучался парсинг файлов форматов .json, .xml и .yaml. Для парсинга 
+использовались следующие классы из библиотеки Jakson:
+
+* ObjectMapper для .json
+* XmlMapper для .xml
+* ObjectMapper(YAMLFactory()) для .yaml
+
+Объекты этих классов используются в классе ReactorStorage, который в целом отвечает
+за хранение и чтение списка реакторов. Реакторы хранятся в Map<String, Reactor>,
+где ключом выступает название реактора, а значением экземпляр класса Reactor, 
+содержащий подробную информацию  нем. 
+
+За представление считанной информации в графическом виде и предоставления 
+пользователю функционала выбора исходного файла отвечает класс Gui. Выбор файла 
+осуществляется с помощью JFileChooser.
+
 
 
 <br>
 
+#### Диаграмма классов
 
-В данной работе 
-
-
-<br>
-
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/Snow0w/Mephi_java_sem2_lab2/blob/master/files/images/diagram.jpg)
 
